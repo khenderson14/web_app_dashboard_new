@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web App Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="grid-container">
+    <header>
+      <h1><strong>Web</strong>App<strong>&trade;</strong></h1>
+        <div class="bell">
+                <img id="bell-img" src="svgs/bell.svg" alt="notifications bell icon"> 
+                <span class="message-alert"></span> 
+        </div>
+        <img id="header-img" src="images/member-1.jpg" alt="Katie Haughton">
+        <h3 id="header-name">Katie Haughton</h3>
+    </header>
+    <nav>
+      <a href="#home"><img src="svgs/home.svg" alt="Home"></a>
+      <a href="#bar-chart"><img src="svgs/bar-chart.svg" alt="Charts"></a>
+      <a href="#members"><img src="svgs/members.svg" alt="Members"></a>
+      <a href="#settings"><img src="svgs/settings.svg" alt="Settings"></a>
+    </nav>
+<main>
+    <!--main dashboard header-->
+    <div class="main-header">
+        <div class="dashboard">
+         <h2>Dashboard</h2>
+        </div>
+         <div class="dash-tab"></div> <!--tab of the dashboard-->
+    </div>
+    <!--alert notification-->
+    <div id="alert" class="dashboard-alert">
+      <h3><span>Alert:</span> You have unread messages<span class="close-alert">X</span></h3>
+    </div>
+    <!--traffic-->
+    <section class="traffic">
+        <div class="traffic-header">
+        <h3 class="section-header">TRAFFIC</h3>
+        <div id="traffic-nav">
+            <ul>
+                <li id="traffic-links">Hourly</li>
+                <li id="traffic-links">Daily</li>
+                <li id="traffic-links">Weekly</li>
+                <li id="traffic-links">Monthly</li>
+            </ul>
+        </div>
+        <div id="traffic-container" class="container-full">
+            <canvas id="traffic-chart"></canvas>
+        </div>
+    </div>
+    </section>
+    <!--daily traffic-->
+    <section id="daily-traffic" class="daily-traffic">
+        <h3 class="section-header">DAILY TRAFFIC</h3>
+        <div class="container-half">
+            <canvas id="daily-traffic-chart"></canvas>
+        </div>
+    </section>
+    <!--mobile users-->
+    <section class="mobile-users">
+        <h3 class="section-header">MOBILE USERS</h3>
+        <div class="container-half">
+            <canvas id="mobile-users"></canvas>
+        </div>
+    </section>
+
+    <!--social media stats-->
+    <section class="social-media">
+      <h3 class="section-header">SOCIAL STATS</h3>
+      <div class="social-row">
+            <div class="social-container">
+                <div id="facebook" class="social-icon">
+                    <img src="svgs/facebook.svg" alt="Facebook logo">
+                </div>
+                    <div class="social-text">
+                        <h4>Facebook</h4>
+                        <p class="stats">10,320</p>
+                    </div>
+            </div>
+
+            <div class="social-container">
+                <div id="instagram" class="social-icon">
+                    <img src="svgs/instagram.svg" alt="Instagram logo">
+                </div>
+                    <div class="social-text">
+                        <h4>Instagram</h4>
+                        <p class="stats">16,445</p>
+                    </div>
+            </div>
+
+            <div class="social-container">
+                <div id="twitter" class="social-icon">
+                    <img src="svgs/twitter.svg" alt="Twitter logo">
+                </div>
+                    <div class="social-text">
+                        <h4>Twitter</h4>
+                        <p class="stats">22,189</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--new members area-->
+    <section id="members" class="new-members">
+        <h3 class="section-header">NEW MEMBERS</h3>
+      <div class="member-content">
+        <div class="member-container">
+          <img src="images/member-1.jpg" alt="Victoria Chambers">
+          <div class="member-info">
+            <p>Victoria Chambers</p>
+            <a href="#">victoria.chambers80@example.com</a>
+          </div>
+            <p>10/15/20</p>
+        </div>
+
+      <div class="member-container">
+          <img src="images/member-2.jpg" alt="Dale Byrd">
+          <div class="member-info">
+            <p>Dale Byrd</p>
+            <a href="#">dale.byrd52@example.com</a>
+          </div>
+            <p>10/15/20</p>
+      </div>
+
+      <div class="member-container">
+          <img src="images/member-3.jpg" alt="Dawn Wood">
+          <div class="member-info">
+            <p>Dawn Wood</p>
+            <a href="#">dawn.wood16@example.com</a>
+          </div>
+            <p>10/15/20</p>
+      </div>
+
+      <div class="member-container">
+          <img src="images/member-4.jpg" alt="Dan Oliver">
+          <div class="member-info">
+            <p>Dan Oliver</p>
+            <a href="#">dan.oliver82@example.com</a>
+          </div>
+            <p>10/15/20</p>
+        </div>
+      </div>
+    </section>
+
+    <!--recent activity-->
+    <section class="recent-activity">
+      <h3 class="section-header">RECENT ACTIVITY</h3>
+        <div class="recent-content">
+            <div class="recent-container">
+                <div class="member-content">
+                    <img src="images/member-1.jpg" alt="Victoria Chambers" class="profile-img">
+                    <div class="recent-text">
+                    <p>Victoria Chambers commented on <strong>WebApp's SEO Tips</strong></p>
+                    <p>4 hours ago</p>
+                </div>
+            </div>
+                    <p class="activity-arrow">&#8250;</p>
+        </div>
+        <div class="recent-container">
+            <div class="member-content">
+                <img src="images/member-2.jpg" alt="Dale Byrd" class="profile-img">
+                <div class="recent-text">
+                    <p>Dale Byrd liked the post<strong>Facebook's Changes for the 2021</strong></p>
+                    <p>5 hours ago</p>
+                </div>
+            </div>
+                <p class="activity-arrow">&#8250;</p>
+            </div>
+        <div class="recent-container">
+            <div class="member-content">
+                <img src="images/member-3.jpg" alt="Dawn Wood" class="profile-img">
+                    <div class="recent-text">
+                        <p>Dawn Wood commented on<strong>Facebook's Changes for the 2021</strong></p>
+                        <p>5 hours ago</p>
+                    </div>
+                </div>
+                    <p class="activity-arrow">&#8250;</p>
+                </div>
+        <div class="member-container">
+                <div class="member-content">
+                    <img src="images/member-4.jpg" alt="Dan Oliver" class="profile-img">
+                    <div class="recent-text">
+                        <p>Dan Oliver posted<strong>WebApp's SEO Tips</strong></p>
+                        <p>1 day ago</p>
+                    </div>
+                </div>
+                    <p class="activity-arrow">&#8250;</p>
+                </div>
+        </div>
+    </section>
+    <!--message user-->
+    <section class="message-user">
+        <h3 class="section-header">MESSAGE USER</h3>
+        <form id="message-form">
+            <div class="user-search">
+                <input type="text" placeholder="Search for User" class="form-search">
+            </div>
+                <textarea class="form-area" id="message-for-user" placeholder="Message for User"></textarea>
+            <button id="send-message" type="submit">SEND</button>
+        </form>
+    </section>            
+    <!--settings-->
+    <section class="settings">
+        <h3 class="section-header">SETTINGS</h3> 
+        <div id="user-settings">
+        <!--on/off toggles-->
+            <div class="toggles"> 
+                <div class="toggle-switcher">
+                    <label class="toggle-on toggle-off toggle-container" onclick>
+                        <input id="email-toggle" type="checkbox">
+                <strong>Send Email Notifications</strong>
+                <span>
+                    <span>Off</span>
+                    <span>On</span>
+                    <a></a>
+                </span>
+            </label>
+        </div>
+        <div class="toggle-switcher">
+            <label class="toggle-on toggle-off toggle-container" onclick>
+                <input id="profile-toggle" type="checkbox">
+                <strong>Set Profile to Public</strong>
+                <span>
+                    <span>Off</span>
+                    <span>On</span>
+                    <a></a>
+                </span> 
+            </label>
+        </div>
+        <select id="user-timezone">
+            <option value="" disabled selected>Select Timezone</option>
+            <option value="EST">EST</option>
+            <option value="CST">CST</option>
+            <option value="MST">MST</option>
+            <option value="PST">PST</option>
+        </select>
+        <div class="settings-status">
+            <button class="save-button">SAVE</button>
+            <button class="cancel-button">CANCEL</button>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <!--JS-->
+  <script src="js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
