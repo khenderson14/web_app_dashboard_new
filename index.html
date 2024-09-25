@@ -28,11 +28,12 @@
         <div class="dashboard">
          <h2>Dashboard</h2>
         </div>
-         <div class="dash-tab"></div> <!--tab of the dashboard-->
+         <div class="dash-tab"></div> 
     </div>
     <!--alert notification-->
     <div id="alert" class="dashboard-alert">
-      <h3><span>Alert:</span> You have unread messages<span class="close-alert">X</span></h3>
+      <h3><span>Alert:</span> You have unread messages</h3>
+      <h3 class="close-alert">X</h3>
     </div>
     <!--traffic-->
     <section class="traffic">
@@ -40,17 +41,16 @@
         <h3 class="section-header">TRAFFIC</h3>
         <div id="traffic-nav">
             <ul>
-                <li id="traffic-links">Hourly</li>
-                <li id="traffic-links">Daily</li>
-                <li id="traffic-links">Weekly</li>
-                <li id="traffic-links">Monthly</li>
+                <li class="traffic-links active">Hourly</li>
+                <li class="traffic-links">Daily</li>
+                <li class="traffic-links">Weekly</li>
+                <li class="traffic-links">Monthly</li>
             </ul>
         </div>
         <div id="traffic-container" class="container-full">
             <canvas id="traffic-chart"></canvas>
         </div>
     </div>
-    </section>
     <!--daily traffic-->
     <section id="daily-traffic" class="daily-traffic">
         <h3 class="section-header">DAILY TRAFFIC</h3>
@@ -65,13 +65,14 @@
             <canvas id="mobile-users"></canvas>
         </div>
     </section>
+</section>
 
     <!--social media stats-->
     <section class="social-media">
       <h3 class="section-header">SOCIAL STATS</h3>
       <div class="social-row">
             <div class="social-container">
-                <div id="facebook" class="social-icon">
+                <div class="social-icon">
                     <img src="svgs/facebook.svg" alt="Facebook logo">
                 </div>
                     <div class="social-text">
@@ -81,7 +82,7 @@
             </div>
 
             <div class="social-container">
-                <div id="instagram" class="social-icon">
+                <div class="social-icon">
                     <img src="svgs/instagram.svg" alt="Instagram logo">
                 </div>
                     <div class="social-text">
@@ -91,7 +92,7 @@
             </div>
 
             <div class="social-container">
-                <div id="twitter" class="social-icon">
+                <div class="social-icon">
                     <img src="svgs/twitter.svg" alt="Twitter logo">
                 </div>
                     <div class="social-text">
@@ -104,44 +105,43 @@
     <!--new members area-->
     <section id="members" class="new-members">
         <h3 class="section-header">NEW MEMBERS</h3>
-      <div class="member-content">
-        <div class="member-container">
-          <img src="images/member-1.jpg" alt="Victoria Chambers">
-          <div class="member-info">
-            <p>Victoria Chambers</p>
-            <a href="#">victoria.chambers80@example.com</a>
-          </div>
-            <p>10/15/20</p>
+        <div class="member-content">
+            <div class="member-container">
+                <img src="images/member-1.jpg" alt="Victoria Chambers">
+                <div class="member-info">
+                    <p>Victoria Chambers</p>
+                    <a href="#">victoria.chambers80@example.com</a>
+                </div>
+                <p>10/15/20</p>
+            </div>
+
+            <div class="member-container">
+                <img src="images/member-2.jpg" alt="Dale Byrd">
+                <div class="member-info">
+                    <p>Dale Byrd</p>
+                    <a href="#">dale.byrd52@example.com</a>
+                </div>
+                <p>10/15/20</p>
+            </div>
+
+            <div class="member-container">
+                <img src="images/member-3.jpg" alt="Dawn Wood">
+                <div class="member-info">
+                    <p>Dawn Wood</p>
+                    <a href="#">dawn.wood16@example.com</a>
+                </div>
+                <p>10/15/20</p>
+            </div>
+
+            <div class="member-container">
+                <img src="images/member-4.jpg" alt="Dan Oliver">
+                <div class="member-info">
+                    <p>Dan Oliver</p>
+                    <a href="#">dan.oliver82@example.com</a>
+                </div>
+                <p>10/15/20</p>
+                </div>
         </div>
-
-      <div class="member-container">
-          <img src="images/member-2.jpg" alt="Dale Byrd">
-          <div class="member-info">
-            <p>Dale Byrd</p>
-            <a href="#">dale.byrd52@example.com</a>
-          </div>
-            <p>10/15/20</p>
-      </div>
-
-      <div class="member-container">
-          <img src="images/member-3.jpg" alt="Dawn Wood">
-          <div class="member-info">
-            <p>Dawn Wood</p>
-            <a href="#">dawn.wood16@example.com</a>
-          </div>
-            <p>10/15/20</p>
-      </div>
-
-      <div class="member-container">
-          <img src="images/member-4.jpg" alt="Dan Oliver">
-          <div class="member-info">
-            <p>Dan Oliver</p>
-            <a href="#">dan.oliver82@example.com</a>
-          </div>
-            <p>10/15/20</p>
-        </div>
-      </div>
-    </section>
 
     <!--recent activity-->
     <section class="recent-activity">
@@ -189,8 +189,9 @@
                 </div>
         </div>
     </section>
+</section>
     <!--message user-->
-    <section class="message-user">
+    <!-- <section class="message-user">
         <h3 class="section-header">MESSAGE USER</h3>
         <form id="message-form">
             <div class="user-search">
@@ -199,13 +200,13 @@
                 <textarea class="form-area" id="message-for-user" placeholder="Message for User"></textarea>
             <button id="send-message" type="submit">SEND</button>
         </form>
-    </section>            
+    </section>             -->
     <!--settings-->
-    <section class="settings">
+    <!-- <section class="settings">
         <h3 class="section-header">SETTINGS</h3> 
-        <div id="user-settings">
+        <div id="user-settings"> -->
         <!--on/off toggles-->
-            <div class="toggles"> 
+            <!-- <div class="toggles"> 
                 <div class="toggle-switcher">
                     <label class="toggle-on toggle-off toggle-container" onclick>
                         <input id="email-toggle" type="checkbox">
@@ -242,10 +243,10 @@
       </div>
       </div>
     </section>
-  </main>
+  </main> -->
   <!--JS-->
-  <script src="js/app.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <!-- <script src="js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script> -->
 </body>
 </html>
 
