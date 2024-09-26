@@ -103,7 +103,7 @@
             </div>
     </section>
     <!--new members area-->
-    <section id="members" class="new-members">
+    <section class="new-members">
         <h3 class="section-header">NEW MEMBERS</h3>
         <div class="member-content">
             <div class="member-container">
@@ -142,9 +142,9 @@
                 <p>10/15/20</p>
                 </div>
         </div>
-
+    </section>
     <!--recent activity-->
-    <section class="recent-activity">
+    <!-- <section class="recent-activity">
       <h3 class="section-header">RECENT ACTIVITY</h3>
         <div class="recent-content">
             <div class="recent-container">
@@ -188,10 +188,9 @@
                     <p class="activity-arrow">&#8250;</p>
                 </div>
         </div>
-    </section>
-</section>
+    </section> -->
     <!--message user-->
-    <!-- <section class="message-user">
+    <section class="message-user">
         <h3 class="section-header">MESSAGE USER</h3>
         <form id="message-form">
             <div class="user-search">
@@ -200,35 +199,24 @@
                 <textarea class="form-area" id="message-for-user" placeholder="Message for User"></textarea>
             <button id="send-message" type="submit">SEND</button>
         </form>
-    </section>             -->
+    </section>            
     <!--settings-->
-    <!-- <section class="settings">
+    <section class="settings">
         <h3 class="section-header">SETTINGS</h3> 
-        <div id="user-settings"> -->
-        <!--on/off toggles-->
-            <!-- <div class="toggles"> 
-                <div class="toggle-switcher">
-                    <label class="toggle-on toggle-off toggle-container" onclick>
-                        <input id="email-toggle" type="checkbox">
-                <strong>Send Email Notifications</strong>
-                <span>
-                    <span>Off</span>
-                    <span>On</span>
-                    <a></a>
-                </span>
-            </label>
-        </div>
-        <div class="toggle-switcher">
-            <label class="toggle-on toggle-off toggle-container" onclick>
-                <input id="profile-toggle" type="checkbox">
-                <strong>Set Profile to Public</strong>
-                <span>
-                    <span>Off</span>
-                    <span>On</span>
-                    <a></a>
-                </span> 
-            </label>
-        </div>
+        <div id="user-settings"> 
+        <!-- on/off toggles-->
+           <div class="toggles"> 
+                <label class="switch" onclick>
+                    <input id="email-toggle" type="checkbox">
+                    <strong>Send Email Notifications</strong> 
+                        <span class="slider round"></span>
+                </label>
+                <label class="switch" onclick>
+                    <input id="profile-toggle" type="checkbox">
+                    <strong>Set Profile to Public</strong> 
+                        <span class="slider round"></span>
+                </label>
+            </div>
         <select id="user-timezone">
             <option value="" disabled selected>Select Timezone</option>
             <option value="EST">EST</option>
@@ -241,12 +229,11 @@
             <button class="cancel-button">CANCEL</button>
         </div>
       </div>
-      </div>
     </section>
-  </main> -->
-  <!--JS-->
-  <!-- <script src="js/app.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script> -->
+  </main> 
+  <!-- JS -->
+  <script src="js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </body>
 </html>
 
