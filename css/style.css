@@ -363,85 +363,71 @@ form {
 
 /* SETTINGS */
 
-.toggle-container {
+.toggles {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-}
-
-.toggles, 
-.toggle-container {
     width: 300px;
 }
 
-.switch strong {
-    margin: 10px;
-}
-
-.switch {
-    font-size: 1rem;
+.toggle-checkbox-wrapper {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px;
+  }
+  
+  .slider-btn {
     position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+  
+    &:before,
+    &:after {
+      bottom: 0;
+      content: '';
+      display: inline-block;
+      margin: auto;
+    }
+  
+    /* ellipse */
+    &:before {
+     background-color: #7d78cc;
+     border-radius: 50px;
+     top: 0;
+     height: 50px;
+     width: 100px;
+    }
+  
+    /* circle */
+    &:after {
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: -40px;
+        height: 40px;
+        left: 10px;
+        transition: .4s;
+        width: 40px;
+    }
   }
   
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
+  .toggle-checkbox {
+    /* hide the "default" checkbox/appearance */
+    display: none;
   
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #7d78cc;
-    -webkit-transition: .4s;
-    transition: .4s;
+    /* ellipse appearance after checkbox-click */
+    &:checked ~ .slider-btn:before {
+      background-color: #7d78cc;
+    }
+    
+    /* circle appearance after checkbox-click */
+    &:checked ~ .slider-btn:after {
+      background-color: #fff;
+      transform: translateX(100px);
+    }
+    
   }
+
   
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  /* input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  } */
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
 
 .save-button {
     background-color: #7d78cc;
