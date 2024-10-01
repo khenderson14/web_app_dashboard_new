@@ -394,7 +394,7 @@ form {
      border-radius: 50px;
      top: 0;
      height: 50px;
-     width: 100px;
+     width: 150px;
     }
   
     /* circle */
@@ -422,7 +422,7 @@ form {
     /* circle appearance after checkbox-click */
     &:checked ~ .slider-btn:after {
       background-color: #fff;
-      transform: translateX(100px);
+      transform: translateX(90px);
     }
     
   }
