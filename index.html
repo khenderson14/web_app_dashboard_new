@@ -204,19 +204,13 @@
     <section class="settings">
         <h3 class="section-header">SETTINGS</h3> 
         <div id="user-settings"> 
-        <!-- on/off toggles-->
-           <div class="toggles"> 
-                <label class="switch" onclick>
-                    <input id="email-toggle" type="checkbox">
-                    <strong>Send Email Notifications</strong> 
-                        <span class="slider round"></span>
-                </label>
-                <label class="switch" onclick>
-                    <input id="profile-toggle" type="checkbox">
-                    <strong>Set Profile to Public</strong> 
-                        <span class="slider round"></span>
-                </label>
-            </div>
+        <!-- Toggles-->
+            <div class="toggle-checkbox-wrapper">
+                <input class="toggle-checkbox" type="checkbox" id="toggle">
+                <label class="slider-btn" for="toggle"></label>
+                <input class="toggle-checkbox" type="checkbox" id="toggle">
+                <label class="slider-btn" for="toggle"></label>
+          </div>
         <select id="user-timezone">
             <option value="" disabled selected>Select Timezone</option>
             <option value="EST">EST</option>
