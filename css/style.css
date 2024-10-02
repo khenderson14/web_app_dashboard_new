@@ -25,7 +25,7 @@ body {
 
 .container-full, .container-half {
     width: 100%;
-    border: 2px solid;
+    border-bottom: .5px solid lightgrey;
     height: 400px;
 }
 
@@ -264,6 +264,10 @@ h2 {
 
 .daily-traffic, .mobile-users {
     width: 50%;
+}
+
+.daily-traffic {
+    border-right: .5px solid lightgrey;
 }
 
 /* SOCIAL MEDIA */
