@@ -404,6 +404,7 @@ h2 {
 
 .message-user {
     width: 50%;
+    padding: 5px 15px;
     border-right: .5px solid lightgray;
 }
 
@@ -421,6 +422,10 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
+}
+
+#message-for-user {
+    height: 200px;
 }
 
 #send-message {
@@ -443,6 +448,7 @@ form {
 }
 .settings {
     width: 50%; 
+    padding: 5px 15px;
 }
 
 .toggles {
