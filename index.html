@@ -209,14 +209,20 @@
             <div id="user-settings"> 
             <!-- Toggles-->
                 <div class="toggle-checkbox-wrapper">
-                    <input class="toggle-checkbox" type="checkbox" id="toggle">
-                    <label class="slider-btn" for="toggle"></label>
-                        <span class="text-off">OFF</span>
-                        <span class="text-on">ON</span>
-                    <input class="toggle-checkbox" type="checkbox" id="toggle">
-                    <label class="slider-btn" for="toggle"></label>
-                        <span class="text-off">OFF</span>
-                        <span class="text-on">ON</span>
+                    <div class="toggle-item">
+                        <input class="toggle-checkbox" type="checkbox" id="toggle-email">
+                        <p>Send Email Notifications</p>
+                        <label class="slider-btn" for="toggle"></label>
+                            <!-- <span class="text-off">OFF</span>
+                            <span class="text-on">ON</span> -->
+                    </div>
+                    <div class="toggle-item">
+                        <input class="toggle-checkbox" type="checkbox" id="toggle-profile">
+                        <p>Set Profile to Public</p>
+                        <label class="slider-btn" for="toggle"></label>
+                            <!-- <span class="text-off">OFF</span>
+                            <span class="text-on">ON</span -->
+                    </div>
               </div>
             <select id="user-timezone">
                 <option value="" disabled selected>Select Timezone</option>
@@ -238,11 +244,3 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
