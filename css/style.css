@@ -424,6 +424,10 @@ h2 {
     color: lightgrey;
 }
 
+#user-timezone {
+    margin-top: 40px;
+}
+
 .form-search::placeholder,
 .form-area::placeholder,
 #user-timezone::placeholder {
@@ -465,6 +469,12 @@ form {
 
 /*Used Code Pen open source for Toggle: https://codepen.io/alvarotrigo/pen/oNoJePo*/
 /* TOGGLES */
+.toggles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .knobs,
 .layer {
     position: absolute;
@@ -479,7 +489,7 @@ form {
     top: 50%;
     width: 100px;
     height: 40px;
-    margin: 0px auto 0 auto;
+    margin: 0px auto 0 80%;
     overflow: hidden;
   }
   
