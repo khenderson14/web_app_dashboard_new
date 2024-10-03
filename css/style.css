@@ -424,6 +424,13 @@ h2 {
     color: lightgrey;
 }
 
+.form-search::placeholder,
+.form-area::placeholder,
+#user-timezone::placeholder {
+    font-family: 'Roboto', sans-serif; 
+    color: lightgrey; 
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -456,76 +463,103 @@ form {
     padding: 5px 15px;
 }
 
-.toggles {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 300px;
-}
-
-.toggle-checkbox-wrapper {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 12px;
+/*Used Code Pen open source for Toggle: https://codepen.io/alvarotrigo/pen/oNoJePo*/
+/* TOGGLES */
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
-
-.toggle-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 45px;
-}
-
-.slider-btn {
+  
+.button {
     position: relative;
-  
-    &:before,
-    &:after {
-      bottom: 0;
-      content: '';
-      display: inline-block;
-      margin: auto;
-    }
-  
-    /* ellipse */
-    &:before {
-     background-color: #7d78cc;
-     border-radius: 50px;
-     top: 0;
-     height: 50px;
-     width: 150px;
-    }
-  
-    /* circle */
-    &:after {
-        background-color: #fff;
-        border-radius: 50%;
-        position: absolute;
-        top: -2px;
-        height: 40px;
-        left: 10px;
-        transition: .4s;
-        width: 40px;
-    }
+    top: 50%;
+    width: 100px;
+    height: 40px;
+    margin: 0px auto 0 auto;
+    overflow: hidden;
   }
   
-  .toggle-checkbox {
-    /* hide the "default" checkbox/appearance */
-    display: none;
-  
-    /* ellipse appearance after checkbox-click */
-    &:checked ~ .slider-btn:before {
-      background-color: #7d78cc;
-    }
-    
-    /* circle appearance after checkbox-click */
-    &:checked ~ .slider-btn:after {
-      background-color: #fff;
-      transform: translateX(90px);
-    }
-    
+.button.r,
+.button.r .layer {
+    border-radius: 100px;
   }
+  
+.button.b2 {
+    border-radius: 50px;
+  }
+  
+.checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  
+.knobs {
+    z-index: 2;
+  }
+  
+.layer {
+    width: 100%;
+    background-color: #7d78cc;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+
+#button-13 .knobs:before,
+#button-13 .knobs:after,
+#button-13 .knobs span {
+  position: absolute;
+  top: 4px;
+  width: 20px;
+  height: 32px;
+  /* font-size: .75rem;
+  font-weight: bold; */
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  border-radius: 50%;
+  transition: 0.3s ease all;
+}
+
+#button-13 .knobs:before,
+#button-13 .knobs:after {
+  color: #fff;
+  z-index: 1;
+}
+
+#button-13 .knobs:before {
+  content: "ON";
+  left: 5px;
+}
+
+#button-13 .knobs:after {
+  content: "OFF";
+  right: 5px;
+}
+
+#button-13 .knobs span {
+  width: 25px;
+  left: 10px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+#button-13 .checkbox:checked + .knobs span {
+  left: 4px;
+  background-color: #fff;
+}
+
+#button-13 .checkbox:checked ~ .layer {
+  background-color: #7d78cc;
+}
 
 
 .save-button {
