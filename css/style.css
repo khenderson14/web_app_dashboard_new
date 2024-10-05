@@ -547,8 +547,10 @@ form {
 }
 
 .settings-status button {
-    width: 45%;
+    width: 48%;
 }
+
+
 /* MEDIA QUERIES */
 
 /* TABLET 768px */
@@ -809,11 +811,17 @@ form {
         font-size: 2rem; 
         font-weight: 100;
     }
+
+    .member-container {
+        justify-content: flex-start;
+        text-align: left;
+    }
     
     .member-container img {
         margin-right: 0;
         border-radius: 50%;
         width: 15%;
+        margin-right: 10px;
     }
 
     .member-content {
@@ -822,6 +830,7 @@ form {
         align-items: flex-start;
         width: 100%;
     }
+
 
     .recent-info {
         width: 100%;
@@ -835,6 +844,7 @@ form {
         align-items: flex-start;
         font-weight: 500;
         margin-top: 10px;
+        margin-left: 0; 
         font-size: 1rem;
     }
 
