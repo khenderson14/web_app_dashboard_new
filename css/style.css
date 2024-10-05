@@ -286,7 +286,6 @@ h2 {
 }
 
 .member-container img {
-    margin-right: 4%;
     border-radius: 50%;
     width: 15%;
 }
@@ -323,9 +322,8 @@ h2 {
 .recent-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
     font-weight: 500;
-    margin-top: 10px;
+    margin: 10px;
     font-size: 1rem;
     width: 100%;
 
@@ -682,7 +680,11 @@ form {
     .recent-info {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+    }
+
+    .activity-arrow {
+        font-size: 2rem; 
+        font-weight: 100;
     }
 
     .recent-info {
@@ -804,12 +806,6 @@ form {
     .recent-activity {
         border-left: .5px solid lightgrey;
         border-top: none;
-    }
-
-    
-    .activity-arrow {
-        font-size: 2rem; 
-        font-weight: 100;
     }
 
     .member-container {
