@@ -629,6 +629,10 @@ form {
         flex-wrap: wrap;
     }
 
+    .traffic-header {
+        flex-wrap: nowrap;
+    }
+
     .daily-traffic,
     .mobile-users {
         width: 50%;
