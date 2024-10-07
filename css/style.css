@@ -4,14 +4,23 @@
     padding: 0;
 }
 
+canvas {
+    max-width: 100%;
+   }
+
 body {
     font-family: 'Nunito Sans', sans-serif;
     width: 100%;
 }
 
 .grid-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 }
 
 .container-full {
@@ -28,11 +37,15 @@ body {
     height: 200px;
 }
 
+.main {
+    grid-area: main;
+    display: grid;
+}
 
 /* HEADER & BELL */
 
 header {
-    width: 100%; 
+    grid-area: header;
     background-color: #7d78cc;
     display: flex;
     align-items: center;
@@ -89,16 +102,20 @@ h1 {
 /* NAVIGATION */
 
 nav {
+    grid-area: nav;
     background-color: #47466e;
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%; 
-    padding: 2% 10%; 
+    position: sticky;
+    top: 0;
+    height: 60px;
+    
 }
 
-nav img {
-    filter: invert(100%);
+nav svg {
+    fill: white;
     width: 50%; 
     margin: 0 20px;
 }
@@ -228,16 +245,17 @@ h2 {
 .social-icon {
     height: 70px;
     width: 70px;
-    border-radius: 50%;
     background-color: #7d78cc;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
 }
 
-.social-icon img {
-    height: 40px;
-    filter: brightness(0) invert(1);
+.social-svg {
+    height: 30px;
+    width: 30px;
+    fill: white;
 
 }
 
@@ -560,12 +578,30 @@ form {
 
 /* TABLET 768px */
 @media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 75px 1fr;
+        grid-template-areas: 
+            "header header"
+            "nav main";
+    }
+
     main {
-        width: 90%;
+        grid-template-columns: 1fr 1fr;
     }
 
     .main-header {
         height: 50px;
+    }
+
+    .main-header,
+    .alert,
+    .traffic,
+    .social-media,
+    .new-members,
+    .recent-activity,
+    .message-user,
+    .settings {
+        grid-column: 1 / span 2;
     }
 
 
@@ -574,9 +610,9 @@ form {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        width: 10%;
-        padding: 2% 1%; 
+        padding: 10% 5%; 
         gap: 1em; 
+        height: auto;
     }
     
     h1 {
@@ -631,15 +667,13 @@ form {
         flex-wrap: nowrap;
     }
 
-    .daily-traffic,
-    .mobile-users {
-        width: 50%;
-    }
-
     .daily-traffic {
-        border-right: .5px solid lightgrey;
+        grid-column: 1 / 2;
     }
 
+    .mobile-users {
+        grid-column: 2 / 3;
+    }
 
     .social-container {
         display: flex;
@@ -650,16 +684,6 @@ form {
         border: 1px solid lightgrey;
         width: 32%;
         padding: 2%;
-    }
-
-    .social-icon {
-        height: 70px;
-        width: 70px;
-        border-radius: 50%;
-        background-color: #7d78cc;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
     
     .social-icon img {
@@ -743,8 +767,12 @@ form {
 
 /* DESKTOP 1024px */
 @media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 90px 1fr;
+    }
+
     main {
-        width: 95%;
+        grid-template-columns: 1fr 1fr;
     }
 
     .main-header {
@@ -756,7 +784,13 @@ form {
     }
 
     nav {
-        width: 5%;
+        grid-area: nav; 
+        display: flex;
+        padding: 10% 20%;
+    }
+
+    main {
+        grid-template-columns: 50% 50%;
     }
 
     nav img {
@@ -801,11 +835,6 @@ form {
         flex-wrap: wrap;
     }
 
-    .daily-traffic,
-    .mobile-users {
-        width: 50%;
-    }
-
     .daily-traffic {
         border-right: .5px solid lightgrey;
     }
@@ -816,11 +845,6 @@ form {
         flex-direction: row;
         align-items: flex-start;
         border-bottom: .5px solid lightgrey;
-    }
-    .new-members,
-    .recent-activity {
-        width: 50%;
-        padding: 5px 15px;
     }
     
     .recent-activity {
@@ -868,10 +892,14 @@ form {
         margin-right: 20px;
     }
 
-    .message-user {
-        width: 50%;
-        padding: 5px 15px;
+    .daily-traffic,
+    .new-members,
+    .message-users {
+        /* width: 50%;
+        padding: 5px 15px; */
         border-right: .5px solid lightgray;
+        grid-column: 1 / span 1;
+
     }
     
     .message-settings {
@@ -885,10 +913,12 @@ form {
         margin-right: 100px
     }
 
+    .recent-activity,
     .settings {
-        width: 50%; 
-        padding: 5px 15px;
+        /* width: 50%; 
+        padding: 5px 15px; */
         border-top: none;
+        grid-column: 2 / span 1;
     }
 
     .settings-status button {
