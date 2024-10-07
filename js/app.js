@@ -60,6 +60,8 @@ const dailyData = {
 };
 
 const dailyOptions = {
+    responsive: true, 
+    maintainAspectRatio: false, 
     scales: {
         y: {
             beginAtZero: true
@@ -115,7 +117,7 @@ const mobileChart = new Chart(mobileCanvas, {
     options: mobileOptions
 });
 
-// RESIZING CHARTS //
+// RESIZING CHARTS FOR MEDIA QUERIES //
 
 function beforePrintHandler () {
     for (let id in Chart.instances) {

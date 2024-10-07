@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     width: 100%;
     /* min-width: 320px; Changed to 320px */
     /* min-height: 100vh; */
@@ -363,7 +363,7 @@ h2 {
 .form-search::placeholder,
 .form-area::placeholder,
 #user-timezone::placeholder {
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Nunito Sans', sans-serif; 
     color: lightgrey; 
 }
 
