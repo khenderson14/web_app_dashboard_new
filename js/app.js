@@ -18,12 +18,14 @@ const data = {
             data: [700, 1200, 1000, 2000, 1500, 1700, 1200, 1800, 2200, 1500, 2500],
             backgroundColor: ['rgb(221, 222, 237)'],
             borderWidth: 1,
-            tension: 0.4,
+            tension: 0.3,
     }]
 };
 
 const trafficOptions = {
     fill: true,
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
         y: {
             beginAtZero: true
@@ -100,6 +102,8 @@ const mobileData = {
 
 const mobileOptions = {
     aspectRatio: 1.9,
+    responsive: true, 
+    maintainAspectRatio: false, 
     plugins: {
         legend: {
             position: 'right',
