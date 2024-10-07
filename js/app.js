@@ -122,3 +122,18 @@ document.getElementById('message-form').addEventListener('submit', function(even
 
 // ERROR MESSAGE //
 
+const user = document.getElementById('user');
+const message = document.getElementById('message-for-user');
+const send = document.getElementById('send');
+
+send.addEventListener('click', () => {
+    if (user.value === '' && message.value === '') {
+        alert('Please fill out user and message fields');
+    } else if (user.value === '') {
+        alert('Please fill out user field');
+    } else if (message.value === '') {
+        alert('Please fill out message field');
+    } else {
+        alert(`Message successfully sent!`);
+    }
+});
