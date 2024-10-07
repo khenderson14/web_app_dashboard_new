@@ -136,6 +136,7 @@ window.addEventListener('beforeprint', () => {
     myChart.resize();
   });
 
+
 // SEND BUTTON // 
 
 document.getElementById('message-form').addEventListener('submit', function(event) {
