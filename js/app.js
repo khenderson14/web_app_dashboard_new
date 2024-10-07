@@ -28,6 +28,12 @@ const trafficOptions = {
         y: {
             beginAtZero: true
         }
+    },
+
+    plugins: {
+        legend: {
+            display: false
+        }
     }
 
 };
@@ -108,6 +114,21 @@ const mobileChart = new Chart(mobileCanvas, {
     data: mobileData,
     options: mobileOptions
 });
+
+// RESIZING CHARTS //
+
+function beforePrintHandler () {
+    for (let id in Chart.instances) {
+        Chart.instances[id].resize();
+    }
+}
+
+window.addEventListener('beforeprint', () => {
+    myChart.resize(600, 600);
+  });
+  window.addEventListener('afterprint', () => {
+    myChart.resize();
+  });
 
 // SEND BUTTON // 
 

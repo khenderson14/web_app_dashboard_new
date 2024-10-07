@@ -16,10 +16,18 @@ body {
     flex-wrap: wrap;
 }
 
-.container-full, .container-half {
+.container-full {
     width: 100%;
     border-bottom: .5px solid lightgrey;
-    height: 400px;
+    height: 200px;
+}
+
+.container-half {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: .5px solid lightgrey;
+    height: 200px;
 }
 
 
@@ -604,6 +612,10 @@ form {
 
     .dashboard-alert {
         width: 95%;
+    }
+
+    .container-full {
+        height: 400px;
     }
 
     #traffic-nav {
