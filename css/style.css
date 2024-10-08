@@ -30,9 +30,6 @@ body {
 }
 
 .container-half {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     border-bottom: .5px solid lightgrey;
     height: 200px;
 }
@@ -180,18 +177,20 @@ h2 {
 
 /* TRAFFIC */
 
-/* .traffic {
-    padding-top: 0;
-    display: flex;
-    flex-direction: column;
-} */
+.traffic {
+    display: grid;
+}
+
+.container-full,
+.daily-traffic,
+.mobile-users {
+    grid-column: 1 / 3;
+} 
+
 
 .traffic-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
+    display: grid;
+    grid-column: 1 / 3;
 }
 
 #traffic-nav ul {
@@ -218,9 +217,6 @@ h2 {
     border-radius: 50px; 
 }
 
-/* .daily-traffic, .mobile-users {
-    width: 100%;
-} */
 
 /* SOCIAL MEDIA */
 
@@ -292,11 +288,6 @@ h2 {
     flex-direction: column;
     border-bottom: .5px solid lightgrey;
 }
-
-/* .new-members,
-.recent-activity {
-    width: 100%; 
-} */
 
 .member-container {
     display: flex;
@@ -599,7 +590,11 @@ form {
     .recent-activity,
     .message-user,
     .settings {
-        grid-column: 1 / span 2;
+        grid-column: 1 / 3;
+    }
+
+    .traffic {
+        display: grid;
     }
 
 
@@ -649,20 +644,21 @@ form {
 
     .container-full {
         height: 400px;
+        grid-column: 1 / 3;
     }
 
     #traffic-nav {
         margin-left: auto;
+        grid-column: 2 / 3;
     }
 
-    /* .traffic {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    } */
-
     .traffic-header {
-        flex-wrap: nowrap;
+        display: grid;
+        grid-column: 1 / 3;
+    }
+
+    .section-header {
+        grid-column: 1 / 2;
     }
 
     .traffic-header ul {
@@ -671,11 +667,12 @@ form {
     }
 
     .daily-traffic {
-        grid-column: 1 / span 1;
+        grid-column: 1 / 2;
     }
 
     .mobile-users {
-        grid-column: 2 / span 1;
+        grid-column: 2 / 3;
+        border-left: .5px solid lightgray;
     }
 
     .social-container {
@@ -753,18 +750,8 @@ form {
 
     .container-half {
         width: 45vw;
+        padding: 3%;
     }
-
-    /* .new-members,
-    .recent-activity,
-    .message-user,
-    .settings {
-        width: 100%;
-    } */
-
-    /* .recent-container {
-        width: 100%; 
-    } */
 
     .button {
         margin-right: 300px;
@@ -832,12 +819,6 @@ form {
         width: 98%;
     }
 
-    .traffic {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
     .container-half {
         width: 45vw;
     }
@@ -847,11 +828,7 @@ form {
     }
 
     .member {
-        /* width: 100%; */
-        /* display: flex; */
-        flex-direction: row;
-        /* align-items: flex-start;
-        border-bottom: .5px solid lightgrey; */
+        display: grid;
     }
     
     .recent-activity {
@@ -881,7 +858,7 @@ form {
 
     .recent-info {
         width: 100%;
-        padding: 10px 0 15px;
+        padding: 20px 15px 8px;
         justify-content: space-around;
     }
     
@@ -902,8 +879,6 @@ form {
     .daily-traffic,
     .new-members,
     .message-users {
-        /* width: 50%;
-        padding: 5px 15px; */
         border-right: .5px solid lightgray;
         grid-column: 1 / span 1;
 
@@ -922,10 +897,13 @@ form {
 
     .recent-activity,
     .settings {
-        /* width: 50%; 
-        padding: 5px 15px; */
         border-top: none;
-        grid-column: 2 / span 1;
+        grid-column: 2 / 3;
+    }
+
+    .settings {
+        border-left: .5px solid lightgray;
+        padding: 1px;
     }
 
     .settings-status button {
